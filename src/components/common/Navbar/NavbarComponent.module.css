@@ -162,6 +162,10 @@
         display: flex;
         animation: none;
         background-color: transparent;
+
+        &.navbar_collapse_active{
+            animation: none;
+        }
     }
     .navbar_link{
         margin-right: 8px;
