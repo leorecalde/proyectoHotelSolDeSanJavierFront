@@ -1,8 +1,15 @@
 
 .btnReservationContainer{
-    border: 2px solid var(--color-primary-dark);
+    border: 2px solid rgba(60, 61, 55, 0.8);
     border-radius: 8px;
     padding: 10px;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgba(244, 246, 255, .2);
+        transition: all .3s ease;
+    }
 }
 .btnReservation{
     display: flex;

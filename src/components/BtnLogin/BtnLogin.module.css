@@ -1,7 +1,13 @@
 
 .btn_login{
-    background-color: #f0f8ff;
-    border: 1px solid #000;
+    background-color: var(--color-light-secondary);
+    border: 2px solid rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     font-size: 1.1rem;
+    transition: all .3s ease;
+
+    &:hover{
+        background-color: rgba(244, 246, 255, .5);
+        transition: all .3s ease;
+    }
 }
