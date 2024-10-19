@@ -1,34 +1,72 @@
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import style from "./NavbarComponent.module.css";
+import BtnReservation from "../../BtnReservation/BtnReservation";
+import logo from "../../../assets/logo.png";
+import { useState } from "react";
+import BtnLogin from "../../BtnLogin/BtnLogin";
 
 const NavbarComponent = () => {
+  const [menuIsActive, setMenuIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuIsActive(!menuIsActive);
+  };
   return (
-    <Navbar expand="lg" className={`bg-body-tertiary ${style.navbar}`}>
+    <nav className={`navbar navbar-expand-lg ${style.navbar}`}>
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
+        {/* botón aburguesa personalizado */}
+        <button
+          className={` ${style.btn_toggle} ${
+            menuIsActive ? style.btn_toggle_active : style.btn_toggle_disabled
+          } `}
+          onClick={toggleMenu}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+
+        <div className={` ${style.navbar_brand} `}>
+          <a className="navbar-brand" href="">
+            <img src={logo} alt="" className="img-fluid" />
+          </a>
+        </div>
+
+        <BtnReservation />
+
+        <div
+          className={` ${style.collapse_navbar} ${
+            menuIsActive ? style.navbar_collapse_active : ""
+          } `}
+        >
+          <ul className="navbar-nav m-auto text-center">
+            <li className="nav-item">
+              <a className="nav-link active" href="#">
+                Experiencias
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Habitaciones
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">Promo</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">Actividades</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">Galería</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">Contacto</a>
+            </li>
+            <BtnLogin />
+          </ul>
+        </div>
       </Container>
-    </Navbar>
+    </nav>
   );
 };
 export default NavbarComponent;
