@@ -135,6 +135,20 @@ const NavbarComponent = () => {
             <li
               className="nav-item"
               onClick={() => {
+                handleLink("quienes somos");
+              }}
+            >
+              <a
+                className={`nav-link ${style.navbar_link} ${
+                  currentLink === "quienes somos" && style.active
+                } `}
+              >
+                Quiénes somos
+              </a>
+            </li>
+            <li
+              className="nav-item"
+              onClick={() => {
                 handleLink("contacto");
               }}
             >
