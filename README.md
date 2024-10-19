@@ -42,13 +42,13 @@ Formulario de contacto: Los usuarios pueden enviar consultas directamente desde 
 
 Este proyecto fue desarrollado por:
 
-- Walter Osvaldo Gonzalez
-- Leonardo Emanuel Recalde
-- María Valentina Palazzo Lobo
-- Fernando Miguel Valdivia
-- Joaquin Tomas Herrero Santamarina
-- Isaías Gius
-- Mauro Coniglio
+- [Walter Gonzalez](https://github.com/WalterGonzalez33)
+- [Leonardo Recalde](https://github.com/leorecalde)
+- [Valentina Palazzo Lobo](https://github.com/ValentinaPalazzo)
+- [Fernando Valdivia](https://github.com/Fernando-Valdivia)
+- [Tomas Herrero](https://github.com/Tomas2845)
+- [Isaias Gius](https://github.com/G1U5)
+- [Mauro Coniglio](https://github.com/MauroConiglio)
 
 ## Contacto 📧
 
