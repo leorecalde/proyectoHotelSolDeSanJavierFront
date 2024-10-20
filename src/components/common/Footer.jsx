@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import './Footer.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Footer = () => {
@@ -19,13 +19,31 @@ const Footer = () => {
           </Col>
 
           <Col md={4}>
-            <h5 className='fs-3'>Síguenos</h5>
-            <ul className="list-unstyled">
-              <li><a href="https://www.facebook.com" className="text-light fs-5">Facebook</a></li>
-              <li><a href="https://www.twitter.com" className="text-light fs-5">Twitter</a></li>
-              <li><a href="https://www.instagram.com" className="text-light fs-5">Instagram</a></li>
-            </ul>
-          </Col>
+      <h5 className='fs-3'>Síguenos</h5>
+      <ul className="list-unstyled">
+        <li>
+          <a href="https://www.facebook.com" className="text-light fs-5">
+            {/* Ícono de Facebook */}
+            <i className="bi bi-facebook icon"></i>
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com" className="text-light fs-5">
+            {/* Ícono de Twitter */}
+            <i className="bi bi-twitter icon"></i>
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com" className="text-light fs-5">
+            {/* Ícono de Instagram */}
+            <i className="bi bi-instagram icon"></i>
+            Instagram
+          </a>
+        </li>
+      </ul>
+    </Col>
 
           <Col md={4}>
             <h5 className='fs-3'>Contacto</h5>
