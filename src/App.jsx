@@ -1,3 +1,6 @@
+import Footer from "./components/common/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 function App() {
@@ -5,7 +8,7 @@ function App() {
 
   return (
     <>
-      
+      <Footer/>
     </>
   )
 }
