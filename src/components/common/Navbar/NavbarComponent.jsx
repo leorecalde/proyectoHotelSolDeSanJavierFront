@@ -4,13 +4,37 @@ import BtnReservation from "../../BtnReservation/BtnReservation";
 import logo from "../../../assets/logo.png";
 import { useEffect, useState } from "react";
 import BtnLogin from "../../BtnLogin/BtnLogin";
+import NavLink from "../NavLink/NavLink";
 
 const NavbarComponent = () => {
   const [menuIsActive, setMenuIsActive] = useState(false);
   const [widthWindowState, setWidthWindowState] = useState(window.innerWidth);
   const [currentLink, setCurrentLink] = useState(
-    sessionStorage.getItem("currentLink") || "home"
+    sessionStorage.getItem("currentLink") || "inicio"
   );
+
+  const routesList = [
+    {
+      pathToLink: "/",
+      routeName: "Inicio",
+    },
+    {
+      pathToLink: "/sobre-nosotros",
+      routeName: "Sobre nosotros",
+    },
+    {
+      pathToLink: "/contacto",
+      routeName: "Contacto",
+    },
+    {
+      pathToLink: "/galeria",
+      routeName: "Galería",
+    },
+    {
+      pathToLink: "/admin",
+      routeName: "Administrador",
+    },
+  ];
 
   const handleResizeWindow = () => {
     let newWidth = window.innerWidth;
@@ -62,104 +86,18 @@ const NavbarComponent = () => {
           } `}
         >
           <ul className="navbar-nav text-center">
-            <li
-              className="nav-item"
-              onClick={() => {
-                handleLink("experiencias");
-              }}
-            >
-              <a
-                className={`nav-link ${style.navbar_link} ${
-                  currentLink === "experiencias" && style.active
-                } `}
-              >
-                Experiencias
-              </a>
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => {
-                handleLink("habitaciones");
-              }}
-            >
-              <a
-                className={`nav-link ${style.navbar_link} ${
-                  currentLink === "habitaciones" && style.active
-                } `}
-              >
-                Habitaciones
-              </a>
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => {
-                handleLink("promos");
-              }}
-            >
-              <a
-                className={`nav-link ${style.navbar_link} ${
-                  currentLink === "promos" && style.active
-                } `}
-              >
-                Promos
-              </a>
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => {
-                handleLink("actividades");
-              }}
-            >
-              <a
-                className={`nav-link ${style.navbar_link} ${
-                  currentLink === "actividades" && style.active
-                }`}
-              >
-                Actividades
-              </a>
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => {
-                handleLink("galeria");
-              }}
-            >
-              <a
-                className={`nav-link ${style.navbar_link} ${
-                  currentLink === "galeria" && style.active
-                }`}
-              >
-                Galería
-              </a>
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => {
-                handleLink("quienes somos");
-              }}
-            >
-              <a
-                className={`nav-link ${style.navbar_link} ${
-                  currentLink === "quienes somos" && style.active
-                } `}
-              >
-                Quiénes somos
-              </a>
-            </li>
-            <li
-              className="nav-item"
-              onClick={() => {
-                handleLink("contacto");
-              }}
-            >
-              <a
-                className={`nav-link ${style.navbar_link} ${
-                  currentLink === "contacto" && style.active
-                } `}
-              >
-                Contacto
-              </a>
-            </li>
+            {routesList.map((route, index) => {
+              return (
+                <NavLink
+                  key={index}
+                  handleLink={handleLink}
+                  pathToLink={route.pathToLink}
+                  routeName={route.routeName}
+                  currentLink={currentLink}
+                />
+              );
+            })}
+
             <BtnLogin />
           </ul>
         </div>

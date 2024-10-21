@@ -9,6 +9,11 @@ function App() {
         <NavbarComponent />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/sobre-nosotros" element={<h1>Quines somos</h1>} />
+          <Route path="/admin" element={<h1>Administrador</h1>} />
+          <Route path="/galeria" element={<h1>galeria</h1>} />
+          <Route path="/contacto" element={<h1>Contacto</h1>} />
+          <Route path="*" element={<h1>404 Not found</h1>} />
         </Routes>
       </BrowserRouter>
     </>
