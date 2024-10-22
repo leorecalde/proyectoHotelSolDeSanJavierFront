@@ -1,3 +1,24 @@
+.footer-background {
+  position: relative;
+
+}
+
+.footer-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('http://www.hotelsolsanjavier.com.ar/public/images/slider/PRUEBA%203%20-%20copia.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+
 .icon {
   font-size: 1.5rem;
   margin-right: 8px;
