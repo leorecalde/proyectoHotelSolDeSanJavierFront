@@ -1,16 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavbarComponent from "./components/common/Navbar/NavbarComponent";
+import Index from "./components/pages/Index";
 import Footer from "./components/common/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 
 function App() {
-  
-
   return (
     <>
-      <Footer/>
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

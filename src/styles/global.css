@@ -1,0 +1,19 @@
+:root {
+    --color-primary-dark: #1E201E;
+    --color-secondary-dark: #3C3D37;
+    --color-bg-light: #d3dade;
+    --color-accent: #00652F;
+    --color-light: #ECDFCC;
+    --color-light-secondary: #F4F6FF;
+  }
+
+  body{
+    background-color: var(--color-bg-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main{
+    flex-wrap: 1;
+  }

@@ -1,0 +1,132 @@
+
+.navbar{
+    background-color: rgba(var(--color-secondary-dark), .5) !important;
+}
+
+.btn_toggle{
+    display: flex;
+    flex-flow: column;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    gap: .65rem;
+    cursor: pointer;
+
+    & div{
+        background-color:#000000 ;
+        width: 100%;
+        height: 2px;
+        border-radius: 5px;
+        transition: all .5s;
+        transform-origin: left;
+    }
+}
+    /* Aplicar animación a los estados */
+.btn_toggle_disabled div:first-child {
+    transform: rotate(0deg);
+}
+.btn_toggle_disabled div:nth-child(2) {
+    opacity: 1;
+}
+.btn_toggle_disabled div:last-child {
+    transform: rotate(0deg);
+}  
+.btn_toggle_active div:first-child {
+    transform: rotate(45deg);
+}
+.btn_toggle_active div:nth-child(2) {
+    opacity: 0;
+}
+.btn_toggle_active div:last-child {
+    transform: rotate(-45deg);
+}
+
+.navbar_brand{
+    width: 50px;
+    height: 50px;
+
+    & a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.collapse_navbar{
+    width: 100%;
+    position: absolute;
+    top: 67px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.272);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    -webkit-animation: slide-fwd-br 0.5s ease  forwards;
+	        animation: slide-fwd-br 0.5s ease  forwards;
+
+    &.navbar_collapse_active{
+        display: flex;
+        -webkit-animation: slide-fwd-br-active 0.5s ease  forwards;
+        animation: slide-fwd-br-active 0.5s ease  forwards;
+        
+    }
+}
+
+ /* * ----------------------------------------
+ * animation slide-fwd-br
+ * ---------------------------------------- */
+
+ @keyframes slide-fwd-br-active {
+    0% {
+        width: 0px;
+        height: 0px;
+        border-bottom-right-radius: 50%;
+    }
+    100% {
+        width: 100%;
+        height: 50vh;
+        border-bottom-right-radius: 0%;
+    }
+  }
+  @keyframes slide-fwd-br {
+    0% {
+        width: 100%;
+        height: 50vh;
+        border-bottom-right-radius: 0%;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        border-bottom-right-radius: 50%;
+        display: none;
+    }
+  }
+
+
+@media (min-width: 992px) {
+    .btn_toggle{
+        display: none;
+    }
+    .collapse_navbar{
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: 1.1rem;
+        position: static;
+        display: flex;
+        animation: none;
+        background-color: transparent;
+
+        &.navbar_collapse_active{
+            animation: none;
+        }
+    }
+}
