@@ -5,14 +5,12 @@ import { useState } from "react";
 import FormularioIndex from "../indexComponents/FormularioIndex";
 
 const Index = () => {
-  
-
   return (
     <Container>
       <section className="seccion1">
         <img src={sanJavier} alt="" className="img-fluid" />
         <Row className="mt-3">
-          <Col lg="3"className="ms-5">
+          <Col lg="3" className="ms-5">
             <h3 className="colorVerdeLetra">Buscar Habitaciones</h3>
             <h6 className="colorVerdeClaro">Tarifas y disponibilidad</h6>
           </Col>
@@ -21,6 +19,7 @@ const Index = () => {
           </Col>
         </Row>
       </section>
+      <div className="div-separation"></div>
     </Container>
   );
 };

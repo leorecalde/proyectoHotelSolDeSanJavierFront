@@ -1,6 +1,6 @@
 .seccion1{
     background-color: #0F3D22;
-    ;
+    padding-bottom: 40px;
 }
 
 .colorVerdeClaro{
@@ -13,4 +13,7 @@
 
 .marginBoton{
     margin-top: 33px;
+}
+.div-separation{
+    height: 400px;
 }
