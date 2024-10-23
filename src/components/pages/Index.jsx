@@ -5,6 +5,8 @@ import logo from "../../assets/logo.png";
 import FormularioIndex from "../indexComponents/FormularioIndex";
 import AcercaDeNosotros from "../indexComponents/AcercaDeNosotros";
 import Servicios from "../indexComponents/Servicios";
+import Experiencias from "../indexComponents/Experiencias";
+import Promociones from "../indexComponents/Promociones";
 
 const Index = () => {
   
@@ -22,7 +24,7 @@ const Index = () => {
             <h3 className="colorVerdeLetra">Buscar Habitaciones</h3>
             <h6 className="colorVerdeClaro">Tarifas y disponibilidad</h6>
           </Col>
-          <Col className="">
+          <Col>
             <FormularioIndex></FormularioIndex>
           </Col>
         </Row>
@@ -30,6 +32,8 @@ const Index = () => {
       </section>
       <AcercaDeNosotros></AcercaDeNosotros>
       <Servicios></Servicios>
+      <Experiencias></Experiencias>
+      <Promociones></Promociones>
     </Container>
   );
 };
