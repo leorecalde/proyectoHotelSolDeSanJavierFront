@@ -14,3 +14,28 @@
 .marginBoton{
     margin-top: 33px;
 }
+
+.transparent-rectangle {
+    width: 65%;
+    height: 50%; 
+    background-color: rgba(223, 208, 208, 0.705);
+    z-index: 20;
+    position: absolute;
+    bottom: 115%;
+  }
+
+  .logo {
+    position: absolute;
+    z-index: 30;
+    bottom: 118%;
+    right: 25%; /* Ajusta según necesites */
+  }
+
+  .contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /*height: 100vh; /* Ocupa toda la altura de la ventana */
+  }
