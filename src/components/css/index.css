@@ -39,3 +39,11 @@
     width: 100%;
     /*height: 100vh; /* Ocupa toda la altura de la ventana */
   }
+
+  .seccion3{
+    background-color: rgb(179, 172, 172);
+  }
+
+  .imagenHotel{
+    object-fit: cover;
+  }

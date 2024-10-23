@@ -1,27 +1,28 @@
-
 import { Container, Row, Col, Button } from "react-bootstrap";
-import terrazaHotel from "../../assets/imgInicio/terrazaHotel.jpg";
+import salones from "../../assets/imgInicio/hotel.jpg";
 const AcercaDeNosotros = () => {
   return (
-    <Container>
+    <Container className="my-3">
       <Row>
         <Col>
-          <h3 className="colorVerdeLetra">Acerca de Nosotros</h3>
+          <h3 className="colorVerdeLetra border-bottom border-5 border-dark-subtle">Acerca de Nosotros</h3>
           <p>
-            Sol San Javier es un hotel 4 estrellas ubicado en la cima del cerro
+            Sol de San Javier es un hotel 4 estrellas ubicado en la cima del cerro
             San Javier, rodeado por la majestuosa yunga tucumana y con vistas
-            excepcionales de la ciudad de San Miguel de Tucumán. El hotel cuenta
-            con un extenso parque de 8 hectáreas, repleto de vegetación
-            autóctona y panorámicas impresionantes, que ofrece el escenario
-            ideal para descansar, disfrutar en familia y convertir cualquier
-            evento en un momento único e inolvidable.
+            excepcionales de la ciudad de San Miguel de Tucumán.
           </p>
-          <Button type="button" variant="colorVerdeClaro">
+          <p className="d-none d-md-block">
+            El hotel cuenta con un extenso parque de 8 hectáreas, repleto de
+            vegetación autóctona y panorámicas impresionantes, que ofrece el
+            escenario ideal para descansar, disfrutar en familia y convertir
+            cualquier evento en un momento único e inolvidable.
+          </p>
+          <Button type="button" variant="success">
             Ver más...
           </Button>
         </Col>
-        <Col>
-          <img src={terrazaHotel} alt="" className="img-fluid" />
+        <Col className="d-none d-md-block">
+          <img src={salones} alt="fachada del hotel" className="imagenHotel w-100 h-100" />
         </Col>
       </Row>
     </Container>

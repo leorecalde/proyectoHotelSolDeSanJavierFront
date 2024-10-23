@@ -4,13 +4,14 @@ import "../css/index.css";
 import logo from "../../assets/logo.png";
 import FormularioIndex from "../indexComponents/FormularioIndex";
 import AcercaDeNosotros from "../indexComponents/AcercaDeNosotros";
+import Servicios from "../indexComponents/Servicios";
 
 const Index = () => {
   
 
   return (
     <Container>
-      <section className="seccion1">
+      <section className="seccion1 pb-3">
         <img src={sanJavier} alt="" className="img-fluid" />
         <div className="contenedor">
         <img src={logo} className="logo"/>
@@ -28,6 +29,7 @@ const Index = () => {
         </div>
       </section>
       <AcercaDeNosotros></AcercaDeNosotros>
+      <Servicios></Servicios>
     </Container>
   );
 };
