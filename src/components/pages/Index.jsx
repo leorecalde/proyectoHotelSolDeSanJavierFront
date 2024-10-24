@@ -1,8 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
 import sanJavier from "../../assets/imgInicio/sanJavier.png";
 import "../css/index.css";
-import { useState } from "react";
 import FormularioIndex from "../indexComponents/FormularioIndex";
+import FilterRoomsContainer from "../filterRoomsContainer/FilterRoomsContainer";
 
 const Index = () => {
   return (
@@ -16,6 +16,7 @@ const Index = () => {
           </Col>
           <Col className="">
             <FormularioIndex></FormularioIndex>
+            <FilterRoomsContainer />
           </Col>
         </Row>
       </section>

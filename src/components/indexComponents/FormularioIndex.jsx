@@ -22,7 +22,6 @@ const FormularioIndex = () => {
   const handleDateValidate = (event) => {
     const form = event.currentTarget;
     const validateDate = validationDate(startDate, endDate);
-    setIsEndDateInvalid(!isEndDateInvalid);
 
     if (form.checkValidity() && validateDate.valid) {
       setErrorMessages({ valid: false });
