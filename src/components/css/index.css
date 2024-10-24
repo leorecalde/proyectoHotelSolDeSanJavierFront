@@ -17,6 +17,8 @@
 .transparent-rectangle {
   width: 65%;
   height: 60%;
+  max-width: 400px;
+  max-height: 300px;
   background-color: rgba(223, 208, 208, 0.705);
   z-index: 20;
   position: absolute;
@@ -54,4 +56,10 @@ width: 100%;
 
 .imagenHotel {
   object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
