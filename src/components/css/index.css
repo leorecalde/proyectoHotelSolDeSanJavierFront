@@ -1,49 +1,57 @@
-.seccion1{
-    background-color: #0F3D22;
-    ;
+.seccion1 {
+  background-color: #0f3d22;
+  position: relative;
 }
 
-.colorVerdeClaro{
-    color: #95C46C;
-    ;
+.colorVerdeClaro {
+  color: #95c46c;
 }
-.colorVerdeLetra{
-    color: #2f975a;
+.colorVerdeLetra {
+  color: #2f975a;
 }
 
-.marginBoton{
-    margin-top: 33px;
+.marginBoton {
+  margin-top: 33px;
 }
 
 .transparent-rectangle {
-    width: 65%;
-    height: 50%; 
-    background-color: rgba(223, 208, 208, 0.705);
-    z-index: 20;
-    position: absolute;
-    bottom: 115%;
-  }
+  width: 65%;
+  height: 60%;
+  background-color: rgba(223, 208, 208, 0.705);
+  z-index: 20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .logo {
-    position: absolute;
-    z-index: 30;
-    bottom: 118%;
-    right: 25%; /* Ajusta según necesites */
-  }
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  bottom: 118%;
+  right: 25%;
+}
 
-  .contenedor {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    /*height: 100vh; /* Ocupa toda la altura de la ventana */
-  }
+.contenedorDeLogo{
+position: relative;
+width: 100%;
+}
 
-  .seccion3{
-    background-color: rgb(179, 172, 172);
-  }
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /*height: 100vh; /* Ocupa toda la altura de la ventana */
+}
 
-  .imagenHotel{
-    object-fit: cover;
-  }
+.seccion3 {
+  background-color: rgb(179, 172, 172);
+}
+
+.imagenHotel {
+  object-fit: cover;
+}
