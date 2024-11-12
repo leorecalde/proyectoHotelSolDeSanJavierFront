@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { create } from "../../utils/requests";
+import "../../styles/registro.css";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 if (!apiUrl) {
@@ -25,17 +26,18 @@ const Registro = () => {
       <Row className="register-container">
         <Col md={12} xs={12}>
           <Form
-            className=" mb-4 letter-spacing"
+            className=" mb-4 letter-spacing registro"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <h4 className="mt-4  mb-4 mx-5">Registrate</h4>
+            <h1 className="mt-5 text-success letter-spacing">REGISTRATE
+            </h1>
             <Form.Group
               className="mb-3 mt-4"
               controlId="exampleForm.ControlInputName"
             >
               <Form.Label>Nombre y apellido</Form.Label>
               <Form.Control
-                className=" rounded-5 border-3 "
+                className=" rounded-5 border-3 max-width"
                 type="text"
                 placeholder="Ej: Juan paez"
                 {...register("username", {
@@ -92,6 +94,66 @@ const Registro = () => {
             </Form.Group>
 
             <Form.Group
+              className="mb-3  mt-3"
+              controlId="exampleForm.ControlInputPassword"
+            >
+              <Form.Label> Repetir Contraseña</Form.Label>
+              <Form.Control
+                className=" rounded-5 border-3 "
+                type="password"
+                placeholder="Password"
+                {...register("password", {
+                  required: "La contraseña es obligatorio",
+                  minLength: {
+                    value: 5,
+                    message:
+                      "La contraseña debe tener un minimo de 5 caracteres",
+                  },
+                  maxLength: {
+                    value: 15,
+                    message:
+                      "La contraseña debe tener un maximo de 15 caracteres",
+                  },
+                  pattern: {
+                    value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
+                    message:
+                      "El password debe contener al menos una letra mayúscula, una letra minúscula y un número",
+                  },
+                })}
+              />
+
+              <Form.Text className="text-danger">
+                {errors.password?.message}
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group
+              className="mb-3 "
+              controlId="exampleForm.ControlInputEmail"
+            >
+              <Form.Label>Telefono</Form.Label>
+              <Form.Control
+                className=" rounded-5 border-3 "
+                type="tel"
+                placeholder=" ej: 3813321783"
+                {...register("tel", {
+                  required: "El Telefono es obligatorio",
+                  minLength: {
+                    value: 10,
+                    message: "El telefono debe tener como minimo 3 numeros",
+                  },
+                  maxLength: {
+                    value: 10,
+                    message: "El telefono debe tener como maximo 12 numeros",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.tel?.message}
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group
               className="mb-3 "
               controlId="exampleForm.ControlInputEmail"
             >
@@ -124,7 +186,7 @@ const Registro = () => {
             </Form.Group>
 
             <Button
-              className="text-center rounded-5 border-3  mx-5 "
+              className=" mx-5 rounded-4   "
               variant="success"
               type="submit"
             >
