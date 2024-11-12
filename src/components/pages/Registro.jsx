@@ -25,12 +25,13 @@ const Registro = () => {
     <Container className="d-flex justify-content-center vh-80 bg-light rounded-4 mt-1 mb-1">
       <Row className="register-container">
         <Col md={12} xs={12}>
+        <h1 className="mt-5 text-success letter-spacing">REGISTRATE
+            </h1>
           <Form
             className=" mb-4 letter-spacing registro"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <h1 className="mt-5 text-success letter-spacing">REGISTRATE
-            </h1>
+            
             <Form.Group
               className="mb-3 mt-4"
               controlId="exampleForm.ControlInputName"
@@ -186,7 +187,7 @@ const Registro = () => {
             </Form.Group>
 
             <Button
-              className=" mx-5 rounded-4   "
+              className=" mx-5 mt-1  "
               variant="success"
               type="submit"
             >
