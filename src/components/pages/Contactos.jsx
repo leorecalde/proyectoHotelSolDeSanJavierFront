@@ -1,6 +1,7 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { BsFillTelephoneFill ,  BsGeoAltFill  } from "react-icons/bs";
+import "../../styles/registro.css"
 
 
 
@@ -18,7 +19,7 @@ const Contactos = () => {
   return (
     <Container className="d-flex justify-content-center vh-80 bg-light rounded-4 mt-1 mb-1">
       <Row>
-        <Col md={12} xs={12}>
+        <Col md={12} xs={12} className="contacto">
           <Form
             className=" mb-1 letter-spacing "
             onSubmit={handleSubmit(onSubmit)}

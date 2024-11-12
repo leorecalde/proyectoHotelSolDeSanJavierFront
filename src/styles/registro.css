@@ -1,3 +1,7 @@
 .registro{
- max-width: 400px; min-width: 150px;
+ max-width: 400px; min-width: 400px;
+}
+
+.contacto {
+    max-width: 400px; min-width: 400px;
 }
