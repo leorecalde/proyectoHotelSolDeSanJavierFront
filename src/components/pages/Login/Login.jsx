@@ -28,10 +28,14 @@ const Login = ({ setUsuarioLogueado }) => {
         const datos = await respuesta.json();
         sessionStorage.setItem(
           "usuariosHotel",
-          JSON.stringify({ id: datos.id, token: datos.token })
+          JSON.stringify({ id: datos.id, token: datos.token, roll:datos.roll })
         );
         setUsuarioLogueado(datos);
-        navegacion("/");
+        if (datos.roll === "Admin"){
+          navegacion("/admin");
+        }else{
+          navegacion("/")
+        }
       } else {
         Swal.fire({
           title: "Error",
