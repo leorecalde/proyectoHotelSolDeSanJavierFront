@@ -38,7 +38,7 @@ const NavbarComponent = ({ setUsuarioLogueado, usuarioLogueado}) => {
       pathToLink: "/galeria",
       routeName: "Galería",
     },
-    ...(tokenUser ? [
+    ...(tokenUser?.roll === "Admin" ? [
       {
         pathToLink: "/admin",
         routeName: "Administrador",
