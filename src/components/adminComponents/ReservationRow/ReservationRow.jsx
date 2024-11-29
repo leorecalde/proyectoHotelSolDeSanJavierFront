@@ -8,6 +8,9 @@ const ReservationRow = ({
   check_in,
   check_out,
   persons,
+  borrarReserva
+
+
 }) => {
   return (
     <tr className={` ${style.user_row_container} `}>
@@ -45,7 +48,7 @@ const ReservationRow = ({
           <Button className={` ${style.action_button} `}>
             <FaPen />
           </Button>
-          <Button className={` ${style.action_button} `}>
+          <Button onClick={borrarReserva} className={` ${style.action_button} `}  >
             <FaTrash />
           </Button>
         </div>

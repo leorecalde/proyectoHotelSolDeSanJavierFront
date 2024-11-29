@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button} from "react-bootstrap";
 import trabajar from "../../assets/imgInicio/trabajar.jpg"
 import descansar from "../../assets/imgInicio/descansar.jpg"
 import divertirse from "../../assets/imgInicio/divertirse.jpg"
@@ -7,9 +7,9 @@ import "../../styles/index.css"
 const Experiencias = () => {
   return (
     <Container className="my-3 text-center">
-      <Row>
+      <Row className="bordesCard">
         <h2 className="colorVerdeLetra">Elegí tu experiencia!</h2>
-        <Col xs="12" md="4" className="my-2">
+        <Col xs="12" md="4" className="my-2 ">
           <Card>
             <Card.Img variant="top" src={trabajar} />
             <Card.Body>
