@@ -1,0 +1,11 @@
+.animate-card {
+    box-shadow: 0 4px 8px #95c46c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .animate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px #95c46c;
+    cursor: pointer;
+  }
+

@@ -1,12 +1,14 @@
 import { Container, Row, Col, Card, Button, Image } from "react-bootstrap";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import "./stylecard.css"
+
 
 const CardIntegrants = ({image,title,urlGit,urlLink}) => {
   return (
       <> 
       <Col xs="12" md="4" className="my-2">
-        <Card className="card_integrated m-3 m-lg-3 p-3">
+        <Card className="card_integrated m-3 m-lg-3 p-3 animate-card ">
           <div className="d-flex justify-content-center mt-4">
             <Card.Img
               variant="top"

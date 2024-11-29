@@ -7,6 +7,7 @@ import WalterGonzalez from "../../assets/imgAboutUs/WalterGonzalez.jpg";
 import IsaiasGius from "../../assets/imgAboutUs/isaiasGius.jpg"
 import CardIntegrants from "./CardIntegrants/Card_integrants.jsx";
 
+
 const QuienesSomos = () => {
   const listaIntegrantes = [
     {
