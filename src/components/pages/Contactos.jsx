@@ -1,9 +1,9 @@
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { BsFillTelephoneFill ,  BsGeoAltFill  } from "react-icons/bs";
-import "../../styles/registro.css"
-
-
+import { BsFillTelephoneFill, BsGeoAltFill } from "react-icons/bs";
+import "../../styles/registro.css";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Contactos = () => {
   const {
@@ -24,12 +24,14 @@ const Contactos = () => {
             className=" mb-1 letter-spacing "
             onSubmit={handleSubmit(onSubmit)}
           >
-            <h1 className="mt-4 mb-4 mx-5 text-success letter-spacing">CONTACTO</h1>
+            <h1 className="mt-4 mb-4 mx-5 text-success letter-spacing">
+              CONTACTO
+            </h1>
             <h6 className="text-center">
-            <BsFillTelephoneFill /> (+54 9) (0381) 155-279796
+              <BsFillTelephoneFill /> (+54 9) (0381) 155-279796
             </h6>
             <h6 className="text-center">
-            <BsGeoAltFill /> Ruta 340 - Km 23, San Javier
+              <BsGeoAltFill /> Ruta 340 - Km 23, San Javier
             </h6>
             <h6 className="text-center">Tucuman, Argentina</h6>
             <Form.Group
@@ -132,10 +134,16 @@ const Contactos = () => {
                 {errors.consulta?.message}
               </Form.Text>
             </Form.Group>
-            <div className="d-flex justify-content-center text-center rounded-5 border-4 ">
-              <Button variant="success" type="submit">
-                Enviar
+            <div className="d-flex justify-content-center ">
+              <Button variant="success" type="submit" className="rounded-5 border-4 "  >
+                Enviar 
               </Button>
+
+              <Link to="/">
+                <Button className="rounded-5 btn-dark mx-2 text-center rounded-5 border-4 ">
+                  Volver al inicio
+                </Button>
+              </Link>
             </div>
           </Form>
         </Col>
